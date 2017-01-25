@@ -23,7 +23,7 @@ App.Process = Ember.View.extend({
   }.property('hostname', 'pid'),
 
   hup: function(){
-    $.post("/message-bus/_diagnostics/hup/" + this.get('hostname') + "/" + this.get('pid'));
+    $.post("_diagnostics/hup/" + this.get('hostname') + "/" + this.get('pid'));
   }
 });
 
@@ -63,7 +63,7 @@ App.IndexModel = Ember.Object.extend({
       _this.set("discovering", false);
     }, 1 * 1000);
 
-    $.post("/message-bus/_diagnostics/discover");
+    $.post("_diagnostics/discover");
   }
 });
 

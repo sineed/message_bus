@@ -22,7 +22,7 @@
   queue = [];
   interval = null;
   failCount = 0;
-  baseUrl = "/";
+  baseUrl = "/poll/";
   paused = false;
   later = [];
   chunkedBackoff = 0;
